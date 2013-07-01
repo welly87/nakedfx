@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace NakedForexSpecs
 {
@@ -7,6 +8,7 @@ namespace NakedForexSpecs
     {
         private Movement _latestMovement;
         private double _latestValue;
+        private List<SpZone> _zones;
 
         public ZoneDetector()
         {
@@ -35,5 +37,38 @@ namespace NakedForexSpecs
         }
 
         public IList<double> TurningPoints { get; set; }
+
+        public void CalculateZones()
+        {
+            var orderedTurningPoints = TurningPoints.OrderBy(x => x);
+
+            _zones = new List<SpZone>();
+
+            var latestZone = new SpZone(0);
+
+            foreach (var orderedTurningPoint in orderedTurningPoints)
+            {
+                if (latestZone.Contains(orderedTurningPoint))
+                {
+                    latestZone.Add(orderedTurningPoint);
+                }
+                else
+                {
+                    latestZone = new SpZone(orderedTurningPoint);
+                    _zones.Add(latestZone);
+                }
+            }
+
+            Console.WriteLine(_zones.Count);
+
+            var orderstrength = _zones.OrderByDescending(x => x.Price);
+
+            foreach (var spZone in orderstrength)
+            {
+                Console.WriteLine(spZone);
+            }
+        }
+
+
     }
 }

@@ -56,33 +56,9 @@ namespace NakedForexSpecs
 
             Console.WriteLine(detector.TurningPoints.Count);
             
-            var orderedTurningPoints = detector.TurningPoints.OrderBy(x => x);
+            detector.CalculateZones();
 
-            var zones = new List<SpZone>();
-
-            var latestZone = new SpZone(0);
-
-            foreach (var orderedTurningPoint in orderedTurningPoints)
-            {
-                if (latestZone.Contains(orderedTurningPoint))
-                {
-                    latestZone.Add(orderedTurningPoint);
-                }
-                else
-                {
-                    latestZone = new SpZone(orderedTurningPoint);
-                    zones.Add(latestZone);
-                }
-            }
-
-            Console.WriteLine(zones.Count);
-
-            var orderstrength = zones.OrderByDescending(x => x.Price);
-
-            foreach (var spZone in orderstrength)
-            {
-                Console.WriteLine(spZone);
-            }
+            
         }
     }
 }
