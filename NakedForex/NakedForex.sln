@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NakedTrader", "NakedTrader\NakedTrader.csproj", "{6A3CDF0C-AC6F-4C7A-BA8F-D00FE848FDFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NakedForexSpecs", "NakedForexSpecs\NakedForexSpecs.csproj", "{943DFE9A-3D7B-48D2-B9B4-12FBEF27B99B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A3CDF0C-AC6F-4C7A-BA8F-D00FE848FDFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3CDF0C-AC6F-4C7A-BA8F-D00FE848FDFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3CDF0C-AC6F-4C7A-BA8F-D00FE848FDFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3CDF0C-AC6F-4C7A-BA8F-D00FE848FDFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{943DFE9A-3D7B-48D2-B9B4-12FBEF27B99B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943DFE9A-3D7B-48D2-B9B4-12FBEF27B99B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943DFE9A-3D7B-48D2-B9B4-12FBEF27B99B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943DFE9A-3D7B-48D2-B9B4-12FBEF27B99B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
